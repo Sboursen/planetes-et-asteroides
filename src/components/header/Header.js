@@ -2,7 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
-  const setActiveStyle = (navData) => (navData.isActive ? 'underline text-slate-600' : '');
+  const setActiveStyle = (navData) => {
+    const result = navData.isActive
+      ? 'underline text-slate-600'
+      : '';
+    return result;
+  };
   return (
     <header className="h-16 flex flex-row justify-between items-center my-6 mx-12 pb-4">
       <NavLink
@@ -19,7 +24,7 @@ const Header = () => {
           About
         </NavLink>
         <div className="w-2 h-4 border-r-2 border-black" />
-        <NavLink className={setActiveStyle} to="/profile">
+        <NavLink className={setActiveStyle} to="/details">
           Sort
         </NavLink>
       </nav>
