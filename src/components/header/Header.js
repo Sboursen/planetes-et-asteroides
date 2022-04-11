@@ -13,14 +13,14 @@ const Header = () => {
       </NavLink>
       <nav className="flex flex-row gap-3 justify-between items-center">
         <NavLink className={setActiveStyle} to="/">
-          Rocket
+          Home
         </NavLink>
-        <NavLink className={setActiveStyle} to="/missions">
-          Mission
+        <NavLink className={setActiveStyle} to="/about">
+          About
         </NavLink>
         <div className="w-2 h-4 border-r-2 border-black" />
         <NavLink className={setActiveStyle} to="/profile">
-          Profile
+          Sort
         </NavLink>
       </nav>
     </header>
