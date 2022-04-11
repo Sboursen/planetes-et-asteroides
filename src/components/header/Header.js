@@ -9,7 +9,7 @@ const Header = () => {
     return result;
   };
   return (
-    <header className="h-16 flex flex-row justify-between items-center my-6 mx-12 pb-4">
+    <header className="flex flex-row justify-between items-center my-6 mx-12 pb-4">
       <NavLink
         className="h-full flex flex-row gap-3 justify-between items-center "
         to="/"

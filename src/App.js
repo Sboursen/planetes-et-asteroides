@@ -12,18 +12,11 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="h-1/2">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="details" element={<Details />}>
-            <Route
-              index
-              element={(
-                <main className="p-2">
-                  <p>Select an invoice</p>
-                </main>
-              )}
-            />
+            <Route index element={<section />} />
             <Route
               path=":planetId"
               element={<PlanetDetails />}
