@@ -35,11 +35,35 @@ export function getBodies() {
     getBodiesRequest();
     getAllBodies()
       .then((response) => {
-        const { bodiesList } = response.data;
+        const { bodies: bodiesList } = response.data;
         dispatch(getBodiesSuccess(bodiesList));
       })
       .catch((error) => {
         dispatch(getBodiesFailure(error));
       });
   };
+}
+
+export default function getBodiesReducer(state = initialState, action) {
+  switch (action.type) {
+    case GET_ALL_BODIES_REQUEST:
+      return { ...state, loading: true };
+
+    case GET_ALL_BODIES_SUCCESS:
+      return {
+        loading: false,
+        bodiesList: action.payload,
+        error: '',
+      };
+
+    case GET_ALL_BODIES_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+
+    default:
+      return state;
+  }
 }
