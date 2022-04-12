@@ -10,7 +10,7 @@ import PlanetDetails from './routes/planet-details/planetDetails';
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col justify-between w-full h-full">
       <Header />
       <main className="h-1/2">
         <Routes>
@@ -27,7 +27,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
