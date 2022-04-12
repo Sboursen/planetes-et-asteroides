@@ -6,9 +6,11 @@ import {
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import getBodiesReducer from './home/Home';
+import getBodyReducer from './details/Details';
 
 const rootReducer = combineReducers({
-  getBodies: getBodiesReducer,
+  bodies: getBodiesReducer,
+  body: getBodyReducer,
 });
 
 const store = createStore(

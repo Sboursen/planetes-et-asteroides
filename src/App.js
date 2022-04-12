@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="flex flex-col justify-between w-full h-full">
       <Header />
-      <main className="h-1/2">
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="details" element={<Details />}>
