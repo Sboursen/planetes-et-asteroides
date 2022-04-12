@@ -1,8 +1,19 @@
-import getAllBodies from './solarSystemApi';
+import {
+  getAllBodies,
+  getBodyById,
+} from './solarSystemApi';
 
 describe('getAllBodies', () => {
-  it('should return an object that has "bodies" property pointing an array', async () => {
+  it('should return an response with status 200', async () => {
     const response = await getAllBodies();
+
+    await expect(response.status).toEqual(200);
+  });
+});
+
+describe('getBodyById', () => {
+  it('should return an response with status 200', async () => {
+    const response = await getBodyById('lune');
 
     await expect(response.status).toEqual(200);
   });
