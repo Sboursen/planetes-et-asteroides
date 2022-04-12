@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 export async function getAllBodies() {
-  const endpoint =
-    'https://api.le-systeme-solaire.net/rest/bodies/';
+  const endpoint = 'https://api.le-systeme-solaire.net/rest/bodies/';
 
   try {
     const response = await axios.get(endpoint);
@@ -16,8 +15,7 @@ export async function getAllBodies() {
 }
 
 export async function getBodyById(id) {
-  const baseEndpoint =
-    'https://api.le-systeme-solaire.net/rest/bodies/';
+  const baseEndpoint = 'https://api.le-systeme-solaire.net/rest/bodies/';
 
   const endpoint = `${baseEndpoint}${id}/`;
   try {

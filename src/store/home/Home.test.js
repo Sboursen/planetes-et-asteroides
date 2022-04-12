@@ -1,4 +1,19 @@
-import { getBodiesRequest, getBodiesSuccess, getBodiesFailure } from './Home';
+import nock from 'nock';
+import { thunk } from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+import {
+  getBodiesRequest,
+  getBodiesSuccess,
+  getBodiesFailure,
+  getBodies,
+  getBodiesReducer,
+} from './Home';
+
+const initialState = {
+  loading: false,
+  bodiesList: [],
+  error: '',
+};
 
 describe('getBodiesRequest', () => {
   it('should return an object with a type GET_ALL_BODIES_REQUEST', () => {
@@ -65,5 +80,67 @@ describe('getBodiesFailure', () => {
         payload: 'error',
       }),
     );
+  });
+});
+
+describe('getBodiesReducer', () => {
+  describe('getBodiesRequest action call', () => {
+    let store;
+    beforeEach(() => {
+      store = createStore(
+        getBodiesReducer,
+        applyMiddleware(thunk),
+      );
+    });
+
+    it('should return the exact initial state', () => {
+      expect(store.getState()).toEqual(initialState);
+    });
+
+    it.skip('should return an object that have a property loading set to true on getMissionsRequest action', () => {
+      const store = createStore(
+        missionsReducer,
+        applyMiddleware(thunk),
+      );
+
+      store.dispatch(getMissionsRequest());
+
+      expect(store.getState().loading).toBeTruthy();
+    });
+
+    it.skip('should return an object with the correct value for the missionList property on getMissionsSuccess action', () => {
+      const store = createStore(
+        missionsReducer,
+        applyMiddleware(thunk),
+      );
+      const mockMissionData = [
+        {
+          id: 1,
+          mission: 'mission-1',
+          description: 'mission 1 description',
+          reserved: false,
+        },
+      ];
+
+      store.dispatch(getMissionsSuccess(mockMissionData));
+
+      expect(store.getState().loading).toBeFalsy();
+      expect(store.getState().missionsList).toEqual(
+        mockMissionData,
+      );
+    });
+
+    it.skip('should return an object with the correct value for the error property on getMissionsFailure action', () => {
+      const store = createStore(
+        missionsReducer,
+        applyMiddleware(thunk),
+      );
+      const error = 'error';
+
+      store.dispatch(getMissionsFailure(error));
+
+      expect(store.getState().loading).toBeFalsy();
+      expect(store.getState().error).toEqual(error);
+    });
   });
 });
