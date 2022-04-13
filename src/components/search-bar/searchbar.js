@@ -4,7 +4,7 @@ import { BsSearch } from 'react-icons/bs';
 export default function SearchBar() {
   const [searchText, setSearchText] = useState('');
   const handleChange = (e) => {
-    setSearchText();
+    setSearchText(e.target.value);
   };
   return (
     <label htmlFor="search-planet" className="relative w-fit">

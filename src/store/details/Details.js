@@ -6,7 +6,7 @@ const GET_BODY_FAILURE = 'PLANETES_ET_ASTEROIDES/BODY/GET_FAILURE';
 
 const initialState = {
   loading: false,
-  body: {},
+  body: '',
   error: '',
 };
 
@@ -34,7 +34,8 @@ export function getBody(id) {
   return (dispatch) => {
     getBodyRequest();
     getBodyById(id)
-      .then((body) => {
+      .then((response) => {
+        const { data: body } = response;
         dispatch(getBodySuccess(body));
       })
       .catch((error) => {

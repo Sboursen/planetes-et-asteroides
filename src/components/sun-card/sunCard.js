@@ -18,10 +18,8 @@ export default function SunCard() {
           <span className="inline">Mass: </span>
           <pre className="inline text-base">
             {massValue}
-            {' '}
             x 10
             <sup>{massExponent}</sup>
-            {' '}
             kg
           </pre>
         </li>

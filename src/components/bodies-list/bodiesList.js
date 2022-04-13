@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import BodyCard from '../body-card/bodyCard';
 
-
 export default function BodiesList(props) {
   const { bodies } = props;
   const navigate = useNavigate();
@@ -24,6 +23,7 @@ export default function BodiesList(props) {
           className="block w-full h-full even:bg-grid-one odd:bg-grid-two"
         >
           <BodyCard
+            bodyId={body.id}
             name={body.englishName}
             moonsNumber={body.moons ? body.moons.length : 0}
             orbitsAround={body.aroundPlanet ? body.aroundPlanet.planet : 'Sun'}
@@ -35,7 +35,11 @@ export default function BodiesList(props) {
   );
 }
 
+BodiesList.defaultProps = {
+  bodies: [],
+};
+
 BodiesList.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  bodies: PropTypes.array.isRequired,
+  bodies: PropTypes.array,
 };

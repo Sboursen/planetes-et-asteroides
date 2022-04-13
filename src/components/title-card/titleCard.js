@@ -1,42 +1,46 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function TitleCard(props) {
-  const {
-    name, type, mass, volume, dependentBodies,
-  } = props;
+  const { name, type, mass, vol } = props;
   return (
-    <section className="flex flex-row justify-between items-center my-6 mx-12 pb-4">
-      <ul>
-        <li>{`Name: ${name}`}</li>
+    <section className="flex flex-row justify-around items-start py-4 shadow-sm rounded">
+      <div className="flex flex-col w-fit items-end">
+        <h2 className="text-5xl font-control whitespace-nowrap">{name}</h2>
+      </div>
+      <ul className="border-2 border-white bg-grid-one p-2 rounded ">
         <li>{`Type: ${type}`}</li>
-        <li>{`Mass: ${mass}`}</li>
-        <li>{`Volume: ${volume}`}</li>
-        <li>{`Orbits around: ${dependentBodies}`}</li>
+        <li className="block">
+          <span className="inline">Mass: </span>
+          <pre className="inline text-base">
+            {mass?.massValue}x 10
+            <sup>{mass?.massExponent}</sup>
+            kg
+          </pre>
+        </li>
+        <li className="block">
+          <span className="inline">Volume: </span>
+          <pre className="inline text-base">
+            {vol?.volValue} x 10
+            <sup>{vol?.volExponent}</sup> km
+            <sup>3</sup>
+          </pre>
+        </li>
       </ul>
     </section>
   );
 }
-
 TitleCard.defaultProps = {
-  name: 'Sun',
-  type: 'Star',
-  mass: {
-    massValue: 1.989,
-    massExponent: 30,
-  },
-  volume: {
-    volValue: 1.409,
-    volExponent: 18,
-  },
-  dependentBodies: 8,
+  name: 'PropTypes.string.isRequired',
+  type: 'PropTypes.string.isRequired',
+  mass: {},
+  vol: {},
 };
 
-/* eslint-disable react/forbid-prop-types */
 TitleCard.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
   mass: PropTypes.object,
-  volume: PropTypes.object,
-  dependentBodies: PropTypes.number,
+  // eslint-disable-next-line react/forbid-prop-types
+  vol: PropTypes.object,
 };

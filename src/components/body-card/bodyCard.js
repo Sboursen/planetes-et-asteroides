@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import { BsArrowRightCircle } from 'react-icons/bs';
 
 export default function BodyCard(props) {
-  const { name, moonsNumber, orbitsAround, handleClick } = props;
+  const {
+    bodyId: id, name, moonsNumber, orbitsAround, handleClick,
+  } = props;
 
   return (
     <div className="relative flex flex-col gap-3 p-5 w-full">
       <button
         type="button"
         className="absolute top-2 right-2 hover:text-header hover:bg-white rounded-full"
-        onClick={handleClick}
+        onClick={() => handleClick(id.toLowerCase())}
       >
         <BsArrowRightCircle />
       </button>
@@ -33,6 +35,7 @@ export default function BodyCard(props) {
 }
 
 BodyCard.propTypes = {
+  bodyId: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   moonsNumber: PropTypes.number.isRequired,
   orbitsAround: PropTypes.string.isRequired,
