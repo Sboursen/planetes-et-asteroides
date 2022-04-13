@@ -12,7 +12,7 @@ const Header = () => {
         className="h-full flex flex-row gap-3 justify-between items-center text-4xl"
         to="/"
       >
-        Planets and asteroids
+        Planets & Asteroids
       </NavLink>
       <nav className="flex flex-row gap-3 justify-between items-center">
         <NavLink className={setActiveStyle} to="/">
