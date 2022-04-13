@@ -14,7 +14,7 @@ export default function BodiesList(props) {
   return (
     <ul
       className={
-        'grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4' +
+        'grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4' +
         'gap-1 items-center justify-items-center'
       }
     >

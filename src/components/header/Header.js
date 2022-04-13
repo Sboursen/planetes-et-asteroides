@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import SearchBar from '../search-bar/searchbar';
 
 const Header = () => {
   const setActiveStyle = (navData) => {
@@ -22,9 +23,7 @@ const Header = () => {
           About
         </NavLink>
         <div className="w-2 h-4 border-r-2 border-white" />
-        <NavLink className={setActiveStyle} to="/details">
-          Sort
-        </NavLink>
+        <SearchBar />
       </nav>
     </header>
   );
