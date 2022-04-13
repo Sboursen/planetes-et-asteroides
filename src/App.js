@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="details" element={<Details />}>
-            <Route index element={<section />} />
+            <Route index element={<NoMatch />} />
             <Route path=":planetId" element={<PlanetDetails />} />
           </Route>
           <Route path="/about" element={<About />} />

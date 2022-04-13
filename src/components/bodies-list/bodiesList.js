@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import BodyCard from '../body-card/bodyCard';
 
+
 export default function BodiesList(props) {
   const { bodies } = props;
   const navigate = useNavigate();
+
   const handleBodyCardClick = (id) => {
     navigate(`/details/${id}`);
   };
