@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function BodyCard(props) {
-  const { name, moonsNumber, orbitsAround, handleClick } = props;
+  const {
+    name, moonsNumber, orbitsAround, handleClick,
+  } = props;
 
   return (
     <button
