@@ -10,24 +10,21 @@ import PlanetDetails from './routes/planet-details/planetDetails';
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col gap-2 w-full h-full font-body bg-main text-white text-xl">
       <Header />
-      <main className="h-1/2">
+      <main className="bg-main">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="details" element={<Details />}>
-            <Route index element={<section />} />
-            <Route
-              path=":planetId"
-              element={<PlanetDetails />}
-            />
+            <Route index element={<NoMatch />} />
+            <Route path=":bodyId" element={<PlanetDetails />} />
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

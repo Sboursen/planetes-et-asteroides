@@ -1,33 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import SearchBar from '../search-bar/searchbar';
 
 const Header = () => {
   const setActiveStyle = (navData) => {
-    const result = navData.isActive
-      ? 'underline text-slate-600'
-      : '';
+    const result = navData.isActive ? 'underline text-white font-semibold' : '';
     return result;
   };
   return (
-    <header className="flex flex-row justify-between items-center my-6 mx-12 pb-4">
+    <header className="flex flex-row justify-between items-center py-2 px-6 bg-header">
       <NavLink
-        className="h-full flex flex-row gap-3 justify-between items-center "
+        className="hidden h-full md:flex flex-row gap-3 justify-between items-center text-4xl"
         to="/"
       >
-        Planets and asteroids
+        Planets & Asteroids
       </NavLink>
-      <nav className="flex flex-row gap-3 justify-between items-center">
+      <nav className="flex flex-row gap-6 text-2xl justify-between items-center">
         <NavLink className={setActiveStyle} to="/">
           Home
         </NavLink>
         <NavLink className={setActiveStyle} to="/about">
           About
         </NavLink>
-        <div className="w-2 h-4 border-r-2 border-black" />
-        <NavLink className={setActiveStyle} to="/details">
-          Sort
-        </NavLink>
       </nav>
+      <SearchBar />
     </header>
   );
 };

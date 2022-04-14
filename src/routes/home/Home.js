@@ -1,7 +1,21 @@
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getBodies } from '../../store/home/Home';
+import SunCard from '../../components/sun-card/sunCard';
+import BodiesList from '../../components/bodies-list/bodiesList';
+
 export default function Home() {
+  const bodies = useSelector((state) => state.bodies.bodiesList);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!bodies.length) dispatch(getBodies());
+  }, []);
+
   return (
-    <section className="mt-6 px-12 overflow-auto rounded w-full">
-      <h1 className="text-3xl">Planets</h1>
+    <section className="py-4 px-2 rounded w-full">
+      <SunCard />
+      <BodiesList bodies={bodies} />
     </section>
   );
 }
