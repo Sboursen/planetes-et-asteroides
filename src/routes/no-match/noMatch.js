@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import gif from '../../images/lost.gif';
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
         <h1 className="text-3xl">404 not found</h1>
         <iframe
           title="lost in space"
-          src="https://giphy.com/embed/3o7btZ3T6y3JTmjg4w"
+          src={gif}
           width="480"
           height="270"
           frameBorder="0"
