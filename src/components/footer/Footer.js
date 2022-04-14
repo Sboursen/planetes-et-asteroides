@@ -20,7 +20,6 @@ export default function Footer() {
         onClick={goToTheTop}
         className="hover:text-red-500 underline flex gap-1"
       >
-        <span>HOME</span>
         <BsFillArrowUpCircleFill />
       </button>
     </footer>

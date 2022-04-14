@@ -34,7 +34,7 @@ export default function PlanetDetails() {
   };
 
   return (
-    <section className="py-4 px-2 rounded w-full">
+    <section className="py-4 rounded w-full">
       <TitleCard name={name} type={type} mass={mass} vol={vol} />
       {getMoons(moonsRel, bodies)}
     </section>
