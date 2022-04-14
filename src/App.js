@@ -10,7 +10,7 @@ import PlanetDetails from './routes/planet-details/planetDetails';
 
 function App() {
   return (
-    <div className="flex flex-col gap-2 w-full h-full font-body bg-main text-white text-xl">
+    <div className="flex flex-col gap-2 w-full min-h-screen justify-between font-body bg-main text-white text-xl">
       <Header />
       <main className="bg-main">
         <Routes>

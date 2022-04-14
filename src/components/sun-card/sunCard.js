@@ -7,7 +7,7 @@ export default function SunCard() {
   const volExponent = 18;
 
   return (
-    <section className="flex flex-row justify-around items-start py-4 shadow-sm rounded">
+    <div className="flex flex-row justify-around items-start shadow-sm rounded">
       <div className="flex flex-col w-fit items-end">
         <h2 className="text-5xl font-control whitespace-nowrap">The Sun</h2>
         <h3 className="text-xl">8 planets</h3>
@@ -36,6 +36,6 @@ export default function SunCard() {
           </pre>
         </li>
       </ul>
-    </section>
+    </div>
   );
 }

@@ -13,7 +13,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="py-4 px-2 rounded w-full">
+    <section className="flex flex-col gap-3 py-4 px-2 rounded w-full">
       <SunCard />
       <BodiesList bodies={bodies} />
     </section>
