@@ -14,7 +14,7 @@ export default function BodiesList(props) {
     <ul
       className={
         'grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
-        + 'gap-1 items-center justify-items-center'
+        + 'gap-2 items-center justify-items-center'
       }
     >
       {bodies.map((body) => (

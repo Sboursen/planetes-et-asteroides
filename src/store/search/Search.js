@@ -50,7 +50,6 @@ export default function searchBodiesReducer(state = initialState, action) {
       return { ...state, loading: true };
 
     case SEARCH_BODIES_SUCCESS:
-      console.log(action.payload);
       return {
         loading: false,
         bodiesList: action.payload,

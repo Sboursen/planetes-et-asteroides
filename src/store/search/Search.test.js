@@ -87,8 +87,8 @@ describe('searchBodiesReducer', () => {
   });
 
   it(
-    'should return an object that have a property loading set to true ' +
-      'on SEARCH_BODIES_REQUEST action',
+    'should return an object that have a property loading set to true '
+      + 'on SEARCH_BODIES_REQUEST action',
     () => {
       const mockStore = configureStore([]);
       const store = mockStore(initialState);

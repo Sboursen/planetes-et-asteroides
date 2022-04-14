@@ -6,8 +6,8 @@ export default function SearchResults() {
   const bodies = useSelector((state) => state.search.bodiesList);
 
   return (
-    <section className="mt-6 px-12 rounded w-full justify-self-stretch">
-      <h1 className="text-3xl">searching</h1>
+    <section className="mt-12 px-1 rounded w-full">
+      <h1 className="text-3xl m-4">Search results:</h1>
       <BodiesList bodies={bodies} />
     </section>
   );

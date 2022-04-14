@@ -30,8 +30,7 @@ export async function getBodyById(id) {
 }
 
 export async function searchBodiesByName(name) {
-  const baseEndpoint =
-    'https://api.le-systeme-solaire.net/rest/bodies?filter[]=englishName,sw,';
+  const baseEndpoint = 'https://api.le-systeme-solaire.net/rest/bodies?filter[]=englishName,sw,';
 
   const endpoint = `${baseEndpoint}${name}`;
   try {
