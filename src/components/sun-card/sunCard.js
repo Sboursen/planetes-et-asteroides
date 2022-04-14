@@ -17,7 +17,8 @@ export default function SunCard() {
         <li className="block">
           <span className="inline">Mass: </span>
           <pre className="inline text-base">
-            {massValue}x 10
+            {massValue}
+            x 10
             <sup>{massExponent}</sup>
             kg
           </pre>
@@ -25,8 +26,12 @@ export default function SunCard() {
         <li className="block">
           <span className="inline">Volume: </span>
           <pre className="inline text-base">
-            {volValue} x 10
-            <sup>{volExponent}</sup> km
+            {volValue}
+            {' '}
+            x 10
+            <sup>{volExponent}</sup>
+            {' '}
+            km
             <sup>3</sup>
           </pre>
         </li>

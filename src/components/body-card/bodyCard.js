@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { BsArrowRightCircle } from 'react-icons/bs';
 
 export default function BodyCard(props) {
-  const { bodyId: id, name, moonsNumber, orbitsAround, handleClick } = props;
+  const {
+    bodyId: id, name, moonsNumber, orbitsAround, handleClick,
+  } = props;
 
   return (
     <div className="relative flex flex-col gap-3 p-5 w-full">

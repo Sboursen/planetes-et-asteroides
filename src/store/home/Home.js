@@ -32,7 +32,7 @@ export function getBodiesFailure(error) {
 
 export function getBodies() {
   return (dispatch) => {
-    getBodiesRequest();
+    dispatch(getBodiesRequest());
     getAllBodies()
       .then((response) => {
         const { bodies: bodiesList } = response.data;

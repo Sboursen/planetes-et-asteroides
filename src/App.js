@@ -7,6 +7,7 @@ import Details from './routes/details/Details';
 import About from './routes/about/About';
 import NoMatch from './routes/no-match/noMatch';
 import PlanetDetails from './routes/planet-details/planetDetails';
+import SearchResults from './routes/search-results/searchResults';
 
 function App() {
   return (
@@ -14,12 +15,13 @@ function App() {
       <Header />
       <main className="bg-main">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path="search" element={<SearchResults />} />
           <Route path="details" element={<Details />}>
             <Route index element={<NoMatch />} />
             <Route path=":bodyId" element={<PlanetDetails />} />
           </Route>
-          <Route path="/about" element={<About />} />
+          <Route path="about" element={<About />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </main>

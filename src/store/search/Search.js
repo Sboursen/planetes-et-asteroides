@@ -32,7 +32,7 @@ export function searchBodiesFailure(error) {
 
 export function searchBodies(name) {
   return (dispatch) => {
-    searchBodiesRequest();
+    dispatch(searchBodiesRequest());
     searchBodiesByName(name)
       .then((response) => {
         const { bodies: bodiesList } = response.data;
@@ -44,12 +44,13 @@ export function searchBodies(name) {
   };
 }
 
-export default function getBodiesReducer(state = initialState, action) {
+export default function searchBodiesReducer(state = initialState, action) {
   switch (action.type) {
     case SEARCH_BODIES_REQUEST:
       return { ...state, loading: true };
 
     case SEARCH_BODIES_SUCCESS:
+      console.log(action.payload);
       return {
         loading: false,
         bodiesList: action.payload,
