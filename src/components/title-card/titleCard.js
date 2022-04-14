@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 
 export default function TitleCard(props) {
-  const { name, type, mass, vol } = props;
+  const {
+    name, type, mass, vol,
+  } = props;
   return (
     <section className="flex flex-row justify-around items-start py-4 shadow-sm rounded">
       <div className="flex flex-col w-fit items-end">
@@ -12,7 +14,8 @@ export default function TitleCard(props) {
         <li className="block">
           <span className="inline">Mass: </span>
           <pre className="inline text-base">
-            {mass?.massValue}x 10
+            {mass?.massValue}
+            x 10
             <sup>{mass?.massExponent}</sup>
             kg
           </pre>
@@ -20,8 +23,12 @@ export default function TitleCard(props) {
         <li className="block">
           <span className="inline">Volume: </span>
           <pre className="inline text-base">
-            {vol?.volValue} x 10
-            <sup>{vol?.volExponent}</sup> km
+            {vol?.volValue}
+            {' '}
+            x 10
+            <sup>{vol?.volExponent}</sup>
+            {' '}
+            km
             <sup>3</sup>
           </pre>
         </li>

@@ -29,6 +29,8 @@ export default function PlanetDetails() {
       const moons = bodies.filter((body) => moonsIds.includes(body.id));
       return <BodiesList bodies={moons} />;
     }
+
+    return <></>;
   };
 
   return (
