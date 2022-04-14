@@ -21,7 +21,7 @@ export default function BodyCard(props) {
         <span className="whitespace-nowrap">
           {`${moonsNumber || 'No'} moons`}
         </span>
-        <div className="group hover:animate-spin whitespace-nowrap rounded px-2">
+        <div className="group hover:animate-spin hover:cursor-default whitespace-nowrap rounded px-2">
           <div className="relative w-20 h-20 rounded-full border-white border-2 flex justify-center items-center">
             <span className="flex justify-center items-baseline pt-1">
               {orbitsAround.toUpperCase()}

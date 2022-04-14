@@ -32,7 +32,7 @@ export function getBodyFailure(error) {
 
 export function getBody(id) {
   return (dispatch) => {
-    getBodyRequest();
+    dispatch(getBodyRequest());
     getBodyById(id)
       .then((response) => {
         const { data: body } = response;

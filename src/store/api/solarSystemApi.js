@@ -28,3 +28,18 @@ export async function getBodyById(id) {
     );
   }
 }
+
+export async function searchBodiesByName(name) {
+  const baseEndpoint = 'https://api.le-systeme-solaire.net/rest/bodies?filter[]=englishName,sw,';
+
+  const endpoint = `${baseEndpoint}${name}`;
+  try {
+    const response = await axios.get(endpoint);
+
+    return response;
+  } catch (error) {
+    throw new Error(
+      `Can not get data from ${endpoint}. request returned error: ${error.messages}`,
+    );
+  }
+}
