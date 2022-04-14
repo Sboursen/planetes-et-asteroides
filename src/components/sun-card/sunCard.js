@@ -26,16 +26,15 @@ export default function SunCard() {
       <div className="flex flex-col w-fit items-start">
         <h2 className="text-5xl font-control whitespace-nowrap">The Sun</h2>
         <ul className="flex flex-col pl-4">
-          {groupByType(bodies).map((element, index) => {
+          {groupByType(bodies).map((element) => {
             if (element[1] >= 2) {
               return (
-                // eslint-disable-next-line react/no-array-index-key
-                <li key={index} className="w-fit">
+                <li key={element[0]} className="w-fit">
                   {`${element[0]} ${element[1]}`}
                 </li>
               );
             }
-            return <></>;
+            return <li key={element[0]} />;
           })}
         </ul>
       </div>
