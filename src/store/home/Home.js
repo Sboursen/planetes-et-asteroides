@@ -1,4 +1,5 @@
 import { getAllBodies } from '../api/solarSystemApi';
+import orderByPriority from '../utils';
 
 const GET_ALL_BODIES_REQUEST = 'PLANETES_ET_ASTEROIDES/ALL_BODIES/GET_REQUEST';
 const GET_ALL_BODIES_SUCCESS = 'PLANETES_ET_ASTEROIDES/ALL_BODIES/GET_SUCCESS';
@@ -35,7 +36,8 @@ export function getBodies() {
     dispatch(getBodiesRequest());
     getAllBodies()
       .then((response) => {
-        const { bodies: bodiesList } = response.data;
+        let { bodies: bodiesList } = response.data;
+        bodiesList = orderByPriority(bodiesList, 'bodyType');
         dispatch(getBodiesSuccess(bodiesList));
       })
       .catch((error) => {
