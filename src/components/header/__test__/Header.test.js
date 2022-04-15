@@ -1,44 +1,40 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { toMatchDiffSnapshot } from 'snapshot-diff';
+import { Provider } from 'react-redux';
 import Header from '../Header';
+import store from '../../../store/configureStore';
 import '@testing-library/jest-dom';
 
 expect.extend({ toMatchDiffSnapshot });
 
-test('@Header Rocket Navigation', () => {
-  const { asFragment } = render(
-    <HashRouter>
-      <Header />
-    </HashRouter>,
-  );
-  fireEvent.click(screen.getByText(/Rocket/));
-  const firstRender = asFragment();
-  fireEvent.click(screen.getByText(/Rocket/));
+describe('Header', () => {
+  test('@Header Home Navigation', () => {
+    const { asFragment } = render(
+      <Provider store={store}>
+        <Router>
+          <Header />
+        </Router>
+      </Provider>,
+    );
+    fireEvent.click(screen.getByText(/Home/));
+    const firstRender = asFragment();
+    fireEvent.click(screen.getByText(/Home/));
 
-  expect(firstRender).toMatchDiffSnapshot(asFragment());
-});
+    expect(firstRender).toMatchDiffSnapshot(asFragment());
+  });
 
-test('@Header Mission Navigation', () => {
-  const { asFragment } = render(
-    <HashRouter>
-      <Header />
-    </HashRouter>,
-  );
-  fireEvent.click(screen.getByText(/Mission/));
-  const firstRender = asFragment();
-  fireEvent.click(screen.getByText(/Mission/));
-  expect(firstRender).toMatchDiffSnapshot(asFragment());
-});
-
-test('@Header Profile Navigation', () => {
-  const { asFragment } = render(
-    <HashRouter>
-      <Header />
-    </HashRouter>,
-  );
-  fireEvent.click(screen.getByText(/Profile/));
-  const firstRender = asFragment();
-  fireEvent.click(screen.getByText(/Profile/));
-  expect(firstRender).toMatchDiffSnapshot(asFragment());
+  test('@Header About Navigation', () => {
+    const { asFragment } = render(
+      <Provider store={store}>
+        <Router>
+          <Header />
+        </Router>
+      </Provider>,
+    );
+    fireEvent.click(screen.getByText(/About/));
+    const firstRender = asFragment();
+    fireEvent.click(screen.getByText(/About/));
+    expect(firstRender).toMatchDiffSnapshot(asFragment());
+  });
 });
