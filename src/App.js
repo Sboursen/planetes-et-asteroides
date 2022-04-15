@@ -22,7 +22,7 @@ function App() {
               <Route index element={<NoMatch />} />
               <Route path=":bodyId" element={<PlanetDetails />} />
             </Route>
-            <Route path="about" element={<About />} />
+            <Route path="/about" element={<About />} />
             <Route path="*" element={<NoMatch />} />
           </Routes>
         </main>

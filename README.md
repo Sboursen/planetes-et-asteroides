@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# MV-Module2-capstone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **Planètes-et-astéroïdes** is a web app powered by the [The solar system API](https://api.le-systeme-solaire.net/en/) that displays metrics relative to the planets, satellites, and asteroids that constitute our solar system. In addition to the ability to navigate between the different celestial bodies, it also offers a powerful _search by name_ functionality. It is made as capstone project of the React&Redux module.
 
-## Available Scripts
+## Built With
 
-In the project directory, you can run:
+- TailwindCss
+- React
+- Redux
+- Redux-thunk
+- React-router
+- Redux-logger (tooling)
+- React testing library (unit testing)
+- The solar system API
 
-### `npm start`
+## Milestones
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [x] Milestone 1: **React app setup with redux using the duck pattern**
+- [x] Milestone 2: **Set up the app navigation using react-router**
+- [x] Milestone 3: **Create an API layer using the Solar System API**
+- [x] Milestone 4: **Create the Redux store including the action creators and the reducers**
+- [x] Milestone 5: **Integrate the redux store into the app and display the data in the Home route**
+- [x] Milestone 6: **Implement Details route functionalities**
+- [x] Milestone 7: **Implement Search route and functionality**
+- [x] Milestone 8: **Create the About route**
+- [x] Milestone 9: **Finalize the styling**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## sneak peek
 
-### `npm test`
+![Application GIF](./src/images/space-travelers.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+**Prerequisites:** A Web Browser (preferably FireFox or Chrome)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Option 1**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Use the live Website
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Coming soon](https://)
 
-### `npm run eject`
+### **Option 2**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Set up your own copy locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Clone [the GitHub Repository](https://github.com/Sboursen/planetes-et-asteroides)
+- Go to the Project folder `cd planetes-et-asteroides`
+- Run `npm install` to install the _dependencies_
+- Run `npm start` to run the live server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### (Optional) Run tests
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Stop the server if it's already running `CTRL` + `C`
+- Run `npm test` run the tests
 
-## Learn More
+## About the authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Soufiane Boursen**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- GitHub: [@Sboursen](https://github.com/Sboursen)
+- Twitter: [@sboursen_dev](https://twitter.com/sboursen_dev)
+- LinkedIn: [@sboursen](https://linkedin.com/in/sboursen)
 
-### Code Splitting
+## Contributors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions, issues, and feature requests are welcome!
 
-### Analyzing the Bundle Size
+Feel free to check the [issues page](../../issues/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Show your support
 
-### Making a Progressive Web App
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
+- [Solar System API](https://api.le-systeme-solaire.net/en/)
+- [Original Design](<https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)>) by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+- [NoMatch GIF](https://giphy.com/gifs/epitaphrecords-music-video-3o7btZ3T6y3JTmjg4w) from GIFFY.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE) licensed.

@@ -26,7 +26,7 @@ export default function BodyCard(props) {
             <span className="flex justify-center items-baseline pt-1">
               {orbitsAround.toUpperCase()}
             </span>
-            <span className="absolute group-hover:animate-ping top-[7px] right-[7px] p-1 rounded-full bg-white hover:bg-red-400" />
+            <span className="absolute group-hover:animate-ping-fast top-[7px] right-[7px] p-1 rounded-full bg-white hover:bg-red-400" />
           </div>
         </div>
       </div>
