@@ -24,6 +24,7 @@
 - [x] Milestone 7: **Implement Search route and functionality**
 - [x] Milestone 8: **Create the About route**
 - [x] Milestone 9: **Finalize the styling**
+- [x] Milestone 10: **Implement additional tests**
 
 ## sneak peek
 
