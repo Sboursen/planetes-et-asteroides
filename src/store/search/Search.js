@@ -5,7 +5,7 @@ const SEARCH_BODIES_SUCCESS = 'PLANETES_ET_ASTEROIDES/SEARCH/GET_SUCCESS';
 const SEARCH_BODIES_FAILURE = 'PLANETES_ET_ASTEROIDES/SEARCH/GET_FAILURE';
 
 const initialState = {
-  loading: false,
+  loading: '',
   bodiesList: [],
   error: '',
 };
