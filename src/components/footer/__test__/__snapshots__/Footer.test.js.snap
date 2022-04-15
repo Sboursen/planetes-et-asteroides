@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly in the DOM 1`] = `
+<footer
+  className="w-full bg-slate-600 flex flex-col justify-around items-center py-3"
+>
+  <span>
+    <span>
+      Published under the 
+    </span>
+    <a
+      className="hover:text-red-500 underline"
+      href="./LICENSE.md"
+    >
+      MIT license
+    </a>
+  </span>
+  <button
+    className="hover:text-red-500 underline flex gap-1"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 16 16"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+      />
+    </svg>
+  </button>
+</footer>
+`;
