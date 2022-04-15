@@ -10,9 +10,10 @@ const initialState = {
   error: '',
 };
 
-export function searchBodiesRequest() {
+export function searchBodiesRequest(searchName) {
   return {
     type: SEARCH_BODIES_REQUEST,
+    payload: searchName,
   };
 }
 
@@ -32,7 +33,7 @@ export function searchBodiesFailure(error) {
 
 export function searchBodies(name) {
   return (dispatch) => {
-    dispatch(searchBodiesRequest());
+    dispatch(searchBodiesRequest(name));
     searchBodiesByName(name)
       .then((response) => {
         const { bodies: bodiesList } = response.data;
@@ -47,19 +48,17 @@ export function searchBodies(name) {
 export default function searchBodiesReducer(state = initialState, action) {
   switch (action.type) {
     case SEARCH_BODIES_REQUEST:
-      return { ...state, loading: true };
+      return { ...state, loading: action.payload };
 
     case SEARCH_BODIES_SUCCESS:
       return {
-        loading: false,
+        ...state,
         bodiesList: action.payload,
-        error: '',
       };
 
     case SEARCH_BODIES_FAILURE:
       return {
         ...state,
-        loading: false,
         error: action.payload,
       };
 

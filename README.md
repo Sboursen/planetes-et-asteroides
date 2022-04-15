@@ -11,7 +11,7 @@
 - React-router
 - Redux-logger (tooling)
 - React testing library (unit testing)
-- SpaceX API
+- The solar system API
 
 ## Milestones
 
