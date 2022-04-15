@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SunCard renders correctly in the DOM 1`] = `
+<div
+  className="flex flex-row justify-around items-start shadow-sm rounded py-2"
+>
+  <div
+    className="flex flex-col w-fit items-start"
+  >
+    <h2
+      className="text-5xl font-control whitespace-nowrap"
+    >
+      The Sun
+    </h2>
+    <ul
+      className="flex flex-col pl-4"
+    />
+  </div>
+  <ul
+    className="border-2 border-white bg-grid-one rounded p-3"
+  >
+    <li>
+      Type: Star
+    </li>
+    <li
+      className="block"
+    >
+      <span
+        className="inline"
+      >
+        Mass: 
+      </span>
+      <pre
+        className="inline text-base"
+      >
+        1.989
+        x 10
+        <sup>
+          30
+        </sup>
+        kg
+      </pre>
+    </li>
+    <li
+      className="block"
+    >
+      <span
+        className="inline"
+      >
+        Volume: 
+      </span>
+      <pre
+        className="inline text-base"
+      >
+        1.409
+         
+        x 10
+        <sup>
+          18
+        </sup>
+        km
+        <sup>
+          3
+        </sup>
+      </pre>
+    </li>
+  </ul>
+</div>
+`;
