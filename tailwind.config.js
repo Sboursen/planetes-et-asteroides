@@ -13,6 +13,9 @@ module.exports = {
         control: ['Lato', 'sans-serif'],
         body: ['"Gill Sans"', 'sans-serif'],
       },
+      animation: {
+        'ping-fast': 'ping 0.83s linear infinite',
+      },
     },
     screens: {
       xs: '320px',

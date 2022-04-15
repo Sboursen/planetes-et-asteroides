@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { BsArrowRightCircle } from 'react-icons/bs';
 
 export default function BodyCard(props) {
-  const {
-    bodyId: id, name, moonsNumber, orbitsAround, handleClick,
-  } = props;
+  const { bodyId: id, name, moonsNumber, orbitsAround, handleClick } = props;
 
   return (
     <div className="relative flex flex-col gap-3 p-5 w-full">
@@ -26,7 +24,7 @@ export default function BodyCard(props) {
             <span className="flex justify-center items-baseline pt-1">
               {orbitsAround.toUpperCase()}
             </span>
-            <span className="absolute group-hover:animate-ping top-[7px] right-[7px] p-1 rounded-full bg-white hover:bg-red-400" />
+            <span className="absolute group-hover:animate-ping-fast top-[7px] right-[7px] p-1 rounded-full bg-white hover:bg-red-400" />
           </div>
         </div>
       </div>
