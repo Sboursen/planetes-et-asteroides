@@ -8,7 +8,7 @@ export default function Footer() {
     });
   };
   return (
-    <footer className="w-full bg-slate-600 flex flex-col justify-around items-center">
+    <footer className="w-full bg-slate-600 flex flex-col justify-around items-center py-3">
       <span>
         <span>Published under the </span>
         <a className="hover:text-red-500 underline" href="./LICENSE.md">
