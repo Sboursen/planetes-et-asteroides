@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer';
 import Footer from '../Footer';
 
 describe('Footer', () => {
-  const handleBodyCardClick = (id) => id;
   afterEach(cleanup);
 
   it('renders correctly in the DOM', () => {

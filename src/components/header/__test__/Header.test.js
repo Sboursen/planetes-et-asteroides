@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { HashRouter as Router } from 'react-router-dom';
 import { toMatchDiffSnapshot } from 'snapshot-diff';
 import { Provider } from 'react-redux';
-import Header from '../Header';
+import { HashRouter as Router } from 'react-router-dom';
 import store from '../../../store/configureStore';
+import Header from '../Header';
 import '@testing-library/jest-dom';
 
 expect.extend({ toMatchDiffSnapshot });
