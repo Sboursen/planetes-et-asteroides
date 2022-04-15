@@ -15,7 +15,7 @@ const Header = () => {
       >
         Planets & Asteroids
       </NavLink>
-      <nav className="flex flex-row gap-6 text-2xl justify-between items-center">
+      <nav className="desktop-menu hidden md:flex flex-row gap-6 text-2xl justify-between items-center">
         <NavLink className={setActiveStyle} to="/">
           Home
         </NavLink>
