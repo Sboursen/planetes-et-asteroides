@@ -69,6 +69,21 @@ export default function Home() {
               </div>
             </div>
           </li>
+          <li className="block w-full h-full even:bg-grid-one odd:bg-grid-two">
+            <div className="animate-pulse flex space-x-4 p-2">
+              <div className="rounded-full bg-white h-10 w-10" />
+              <div className="flex-1 space-y-6 py-1">
+                <div className="h-2 bg-white rounded" />
+                <div className="space-y-3">
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="h-2 bg-white rounded col-span-2" />
+                    <div className="h-2 bg-white rounded col-span-1" />
+                  </div>
+                  <div className="h-2 bg-white rounded" />
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </section>
     );
