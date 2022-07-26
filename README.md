@@ -28,7 +28,7 @@
 
 ## sneak peek
 
-![Application GIF](./src/images/space-travelers.gif)
+![Application Screenshot](image/app-screenshot.png)
 
 ## Getting Started
 
@@ -38,7 +38,7 @@
 
 #### Use the live Website
 
-[Coming soon](https://)
+[Live link](https://planetes-et-asteroides.netlify.app/)
 
 ### **Option 2**
 
